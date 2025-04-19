@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="new3.css">
+     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
+
+    
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <aside class="sidebar">
+        <div class="left">
+            <i class="fa-solid fa-drum-steelpan" id="image"></i>
+            <button id="toggle-menu"><i class="fa-solid fa-house"></i></button>
+            <button><i class="fa-solid fa-at"></i></button>
+            <button><i class="fa-solid fa-message"></i></button>
+            <div id="small-screen">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button id="notification-hidden"><i class="fa-solid fa-bell"></i>
+                    <span class="badge">
+                        99+
+                      </span>
+                </button>
+            </div>
+            <button  class="bottom-btn"><i class="bi bi-x"></i></button>
+        </div>
+        <div class="right">
+            <div class="right-inner">
+                <div class="header">
+                    <h3>AM/NS</h3>
+                    <h3>INDIA</h3>
+                </div>
+                <nav>
+                    <ul class="submenu">
+                        <h3>Quater Allotment</h3>
+                        <li><i class="fa-solid fa-gauge-high"></i><p>Residential Dashboard</p></li>
+                        <li><i class="fa-solid fa-arrow-up-right-from-square"></i><p> AMNS Residential Website</p></li>
+                        <li><i class="fa-solid fa-user"></i><p> User Manual</p></li>
+                        <h3>Quater Complaints</h3>
+                        <li><i class="fa-solid fa-bullhorn"></i><p>Quater Complaints</p></li>
+                        <li><i class="fa-solid fa-user"></i><p> User Manual</p></li>
+                        <h3>Quater Finance</h3>
+                        <li><i class="fa-solid fa-coins"></i><p>Quater Finance Dashboard</p></li>
+                        <h3>Module Designers</h3>
+                        <li><i class="fa-solid fa-phone"></i><p> Rahul Anjane</p></li>
+                        <li><i class="fa-solid fa-phone"></i><p>Piyush</p></li>
+                        <h3>Support</h3>
+                        <li><i class="fa-solid fa-circle-info"></i><p>officers@amns.in</p></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Floating Notification Panel -->
+<div id="notification-panel" class="hidden">
+    <div class="notif-header">
+      <h4>Notifications</h4>
+      <i class="fa-solid fa-xmark" id="close-notif"></i>
+    </div>
+    <ul class="notif-list">
+      <li>🔔 New user registered</li>
+      <li>📢 System update at 10PM</li>
+      <li>✅ Backup completed</li>
+    </ul>
+  </div>
+
+    <div id="hidden-search">
+        <input type="text" id="search-input" placeholder="Search..." />
+    </div>
+
+
+    <!-- Floating Menu -->
+<div id="menu-section" class="hidden">
+    <div id="company-urgent">
+      <h3>AM/NS</h3>
+      <i class="bi bi-x-lg" id="close-menu"></i>
+    </div>
+  
+    <div id="menuinfo">
+      <h4>Company</h4>
+      <h4>People</h4>
+      <h4>Society</h4>
+      <h4>Charges</h4>
+      <h4>Dues</h4>
+      <h4 id="room-vacancy">Room Vacancy</h4>
+      <h4>Areas</h4>
+      <h4>About</h4>
+    </div>
+  
+    
+  </div>
+
+    <header>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="company-name">
+            <h2>AM/NS</h2>
+        </div>
+        <div class="navbar">
+            <div class="search-container">
+                <button class="searchbar" onclick="toggleSearch()">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input type="text" class="search-input" placeholder="Search...">
+            </div>
+            <button class="notification">
+                <i class="fa-solid fa-bell"></i>
+                <span class="badge">
+                  99+
+                </span>
+              </button>
+            <div id="profile-pic"></div>
+        </div>
+    </header>
+
+    <!--new update 1-->
+    <div id="overlay"></div>
+    <div id="profile-info">
+        <div id="head1">
+            <div id="photo">
+                <div id="photo1">
+                    <div id="back"></div>
+                    <h4>User name</h4>
+                </div>
+                <i class="bi bi-x-lg"></i>
+            </div>
+            
+            <div id="btn">
+                <button>Log out</button>
+            </div>
+        </div>
+        
+        <div id="head2">
+            <h4 id="account">My Account</h4>
+            <h4>Profile</h4>
+            <h4>Change Password</h4>
+        </div>
+
+        <h3 id="theme">Theme</h3>
+        <div id="head3">
+            
+            <div id="black"><i class="fa-solid fa-moon"></i></div>
+            <div id="white"><i class="fa-solid fa-lightbulb"></i></div>
+            <div id="light"><i class="fa-solid fa-circle-half-stroke"></i></div>
+        </div>
+    </div>
+
+
+   <div class="middle">
+
+    <section id="boxes">
+        <article id="box1" class="building-box">
+            <h2>Building 1</h2>
+            <p><span>3</span> Max Occupant(s) per Room <i class="fa-solid fa-user"></i></p>
+            <p><span>10/400</span> Occupants <i class="fa-solid fa-user-group"></i></p>
+            <p><span>10/400</span> Fully Occupied <i class="fa-solid fa-building"></i></p>
+            <button><i class="fa-regular fa-eye"></i> Select Room</button>
+        </article>
+    
+        <article id="box2" class="building-box">
+            <h2>Building 2</h2>
+            <p><span>2</span> Max Occupant(s) per Room <i class="fa-solid fa-user"></i></p>
+            <p><span>9/500</span> Occupants <i class="fa-solid fa-user-group"></i></p>
+            <p><span>3/200</span> Fully Occupied <i class="fa-solid fa-building"></i></p>
+            <button><i class="fa-regular fa-eye"></i> Select Room</button>
+        </article>
+    
+        <article id="box3" class="building-box">
+            <h2>Building 3</h2>
+            <p><span>1</span> Max Occupant(s) per Room <i class="fa-solid fa-user"></i></p>
+            <p><span>5/600</span> Occupants <i class="fa-solid fa-user-group"></i></p>
+            <p><span>0/400</span> Fully Occupied <i class="fa-solid fa-building"></i></p>
+            <button><i class="fa-regular fa-eye"></i> Select Room</button>
+        </article>
+    </section>
+
+
+</div>
+    
+        
+        
+    
+   
+    
+   
+   
+    <footer>
+        <h3 id="amns">AM/NS</h3>
+        <div id="about-company">
+            <div id="company-details">
+                <a href="#">AM/NS INDIA</a>
+                <a href="#">About Website</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div id="about-website">
+                <a href="#">Tell about website</a>
+                <a href="#">Frequently Ask</a>
+            </div>
+        </div>
+        <div id="address">
+            <div id="location">
+                <i class="fa-solid fa-map-pin" id="location-icon"></i>
+              </div>
+            <div id="server">
+                <i class="fa-solid fa-server"></i>
+                <span class="tooltip1">Server</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Location Panel -->
+<div id="location-panel" class="hidden">
+    <div class="location-header">
+      <div id="combine">
+        <div id="lottie-player" style="width: 25px; height: 25px;"></div>
+        <h4>Your Location</h4>
+      </div>
+      <i class="fa-solid fa-xmark" id="close-location"></i>
+    </div>
+    <div class="location-body">
+      <p>  221B Baker Street, London</p>
+      <p> Latitude: 51.5237</p>
+      <p>Longitude: -0.1585</p>
+    </div>
+</div>
+
+<div id="wraper">
+    <div id="animation"></div>
+</div>
+
+
+
+  
+    
+    <script src="new3.js"></script>
+  
+</body>
+</html>
